@@ -24,10 +24,10 @@ Issues.propTypes = {
 const StyledIssues = styled.section`
   display: flex;
   flex-wrap: nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
 
   @media (min-width: 560px) {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 `;
 
