@@ -8,6 +8,7 @@ import Button from "react-bootstrap/Button";
 import styled from "@emotion/styled";
 
 const { Group, Label, Control, Text } = Form;
+
 const Login = () => {
   return (
     <Layout title="Issues (Company Name)" showHeader={false}>

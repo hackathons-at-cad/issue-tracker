@@ -9,8 +9,8 @@ body {
 .btn-primary {
   background: #673ab7;
   border: none;
-  padding: 10px 0;
+  padding: 10px;
 }
 .btn-primary:hover {
-  background: #580add;
+  background: #9057eb;
 }
