@@ -19,6 +19,8 @@ Header.propTypes = {
   description: PropTypes.string,
 };
 
-const StyledHeader = styled.header``;
+const StyledHeader = styled.header`
+  background-color: "#fff";
+`;
 
 export default Header;

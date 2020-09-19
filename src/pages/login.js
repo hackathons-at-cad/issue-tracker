@@ -1,7 +1,12 @@
 import React from "react";
+import { Layout } from "../components";
 
 const Login = () => {
-  return <div>Login</div>;
+  return (
+    <Layout title="Issues (Company Name)" showHeader={false}>
+      Login
+    </Layout>
+  );
 };
 
 export default Login;

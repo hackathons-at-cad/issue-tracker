@@ -1,7 +1,8 @@
 import React from "react";
+import { Layout } from "../components";
 
 const Issue = () => {
-  return <div>Issue</div>;
+  return <Layout title="Issue">Issue</Layout>;
 };
 
 export default Issue;

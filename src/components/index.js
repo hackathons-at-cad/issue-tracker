@@ -1,2 +1,4 @@
-export * from "./header";
-export * from "./layout";
+import Header from "./header";
+import Layout from "./layout";
+
+export { Header, Layout };
