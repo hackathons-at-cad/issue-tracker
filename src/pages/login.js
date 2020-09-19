@@ -1,10 +1,45 @@
 import React from "react";
 import { Layout } from "../components";
+
 import { Link } from "react-router-dom";
 
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import styled from "@emotion/styled";
+
+const { Group, Label, Control, Text } = Form;
+const Login = () => {
+  return (
+    <Layout title="Issues (Company Name)" showHeader={false}>
+      <StyledFormWrapper>
+        <div className="head-text">
+          <div className="box" />
+          <p>Welcome Back</p>
+        </div>
+        <Form>
+          <Group controlId="formBasicEmail">
+            <Label>Email Address</Label>
+            <Control type="email" placeholder="Input value" />
+            <Text className="text-muted">
+              We'll never share your email with anyone else.
+            </Text>
+          </Group>
+
+          <Group controlId="formBasicPassword">
+            <Label>Password</Label>
+            <Control type="password" placeholder="Input value" />
+          </Group>
+          <Button variant="primary" type="submit" block>
+            Log In
+          </Button>
+          <p className="link">
+            <Link to="/register">Create an account</Link>
+          </p>
+        </Form>
+      </StyledFormWrapper>
+    </Layout>
+  );
+};
 
 export const StyledFormWrapper = styled.div`
   width: 350px;
@@ -19,7 +54,7 @@ export const StyledFormWrapper = styled.div`
   .head-text {
     display: flex;
     justify-content: center;
-    align-item: center;
+    align-items: center;
     vertical-align: middle;
     padding-bottom: 1em;
   }
@@ -44,39 +79,5 @@ export const StyledFormWrapper = styled.div`
     color: #673ab7;
   }
 `;
-
-const Login = () => {
-  return (
-    <Layout title="Issues (Company Name)" showHeader={false}>
-      <StyledFormWrapper>
-        <div className="head-text">
-          {" "}
-          <div className="box"></div>
-          <p>Welcome Back</p>
-        </div>
-        <Form>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email Address</Form.Label>
-            <Form.Control type="email" placeholder="Input value" />
-            <Form.Text className="text-muted">
-              We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
-
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Input value" />
-          </Form.Group>
-          <Button variant="primary" type="submit" block>
-            Log In
-          </Button>
-          <p className="link">
-            <Link to="/register">Create an account</Link>
-          </p>
-        </Form>
-      </StyledFormWrapper>
-    </Layout>
-  );
-};
 
 export default Login;

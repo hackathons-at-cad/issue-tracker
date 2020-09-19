@@ -5,36 +5,37 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { StyledFormWrapper } from "./login";
 
+const { Group, Label, Control, Text } = Form;
+
 const Signup = () => {
   return (
     <Layout title="Sign Up" showHeader={false}>
       <StyledFormWrapper>
         <div className="head-text">
-          {" "}
           <div className="box"></div>
           <p>Create Account</p>
         </div>
         <Form>
-          <Form.Group controlId="formText">
-            <Form.Label>FirstName</Form.Label>
-            <Form.Control type="text" placeholder="Input value" />
-          </Form.Group>
-          <Form.Group controlId="formText">
-            <Form.Label>Surname</Form.Label>
-            <Form.Control type="text" placeholder="Input value" />
-          </Form.Group>
-          <Form.Group controlId="formBasicEmail">
-            <Form.Label>Email Address</Form.Label>
-            <Form.Control type="email" placeholder="Input value" />
-            <Form.Text className="text-muted">
+          <Group controlId="formText">
+            <Label>FirstName</Label>
+            <Control type="text" placeholder="Input value" />
+          </Group>
+          <Group controlId="formText">
+            <Label>Surname</Label>
+            <Control type="text" placeholder="Input value" />
+          </Group>
+          <Group controlId="formBasicEmail">
+            <Label>Email Address</Label>
+            <Control type="email" placeholder="Input value" />
+            <Text className="text-muted">
               We'll never share your email with anyone else.
-            </Form.Text>
-          </Form.Group>
+            </Text>
+          </Group>
 
-          <Form.Group controlId="formBasicPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Input value" />
-          </Form.Group>
+          <Group controlId="formBasicPassword">
+            <Label>Password</Label>
+            <Control type="password" placeholder="Input value" />
+          </Group>
           <Button variant="primary" type="submit" block>
             Create Account
           </Button>
